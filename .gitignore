@@ -1,0 +1,7 @@
+__pycache
+env/
+venv/
+env.bak/
+venv.bak/
+*.log
+*.cpython
