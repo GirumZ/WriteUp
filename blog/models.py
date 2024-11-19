@@ -8,9 +8,9 @@ class Post(models.Model):
         ('published', 'Published'),
     )
 
-    titile = models.CharField(max_length=250)
+    title = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique_for_date='publish')
-    author = models.ForeignKey(User, related_name='blog_posts')
+    author = models.ForeignKey(User, related_name='blog_posts', null=True, on_delete=models.SET_NULL)
     body = models.TextField()
     publish = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
