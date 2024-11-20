@@ -5,3 +5,5 @@ env.bak/
 venv.bak/
 *.log
 *.cpython
+.env
+.venv
